@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOR NALAAA❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to bottom, #ffb6c1, #ffe4ec);
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.container{
+    padding:40px 20px;
+}
+
+h1,h2{
+    color:#ff2e63;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff2e63;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.page{
+    display:none;
+    animation:fade 0.8s;
+}
+
+.active{
+    display:block;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:80px;
+    height:80px;
+    background:white;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    cursor:pointer;
+    transition:0.5s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+    transform:rotateY(180deg) scale(1.1);
+}
+
+/* PAPER LETTER */
+.paper{
+    background:#fffdf5;
+    max-width:650px;
+    margin:30px auto;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    position:relative;
+    text-align:left;
+    line-height:1.9;
+    font-size:20px;
+    color:#444;
+}
+
+/* garis kertas */
+.paper::before{
+    content:"";
+    position:absolute;
+    left:40px;
+    top:0;
+    width:2px;
+    height:100%;
+    background:#ffb6c1;
+}
+
+.typing{
+    white-space:pre-line;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    margin:12px 0;
+    font-size:20px;
+}
+
+#letterButtons{
+    margin-top:20px;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- PAGE 1 -->
+    <div class="page active" id="welcome">
+        <h1>Hi My Loveee nalaaaa ❤️</h1>
+        <p>I have something special for you ✨</p>
+        <button onclick="nextPage('game')">Start</button>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page" id="game">
+        <h2>Match The Love Cards 💖</h2>
+
+        <div class="cards">
+            <div class="card">❤️</div>
+            <div class="card">🌹</div>
+            <div class="card">💕</div>
+            <div class="card">💙</div>
+        </div>
+
+        <button onclick="nextPage('reasons')">Continue</button>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page" id="reasons">
+        <h2>Reasons Why I Love You 💕</h2>
+
+        <ul>
+            <li>Your beautiful smile 😊</li>
+            <li>Your kindness ❤️</li>
+            <li>You always support me ✨</li>
+            <li>You make my life happier 💖</li>
+        </ul>
+
+        <button onclick="openLetter()">Open Letter 💌</button>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page" id="letter">
+
+        <h2>Letter For You 💌</h2>
+
+        <div class="paper">
+            <div class="typing" id="typingText"></div>
+        </div>
+
+        <div id="letterButtons">
+
+            <button id="nextBtn" onclick="nextLetter()">
+                Next Letter 💌
+            </button>
+
+            <button onclick="replayLetter()">
+                Replay ✨
+            </button>
+
+            <button onclick="nextPage('welcome')">
+                Back To Start ❤️
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function nextPage(id){
+
+    document.querySelectorAll('.page').forEach(page=>{
+        page.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+}
+
+/* LETTERS */
+const letters = [
+
+`Dear My Love ❤️
+Thank you for always being with me.
+You are one of the best thingsthat ever happened in my life 
+
+Every moment with you feels special.
+Your smile always makes my day better.
+
+I hope we can always stay together,
+support each other,
+and create beautiful memories forever 💖
+`,
+
+`And...    
+
+Aku tau kamu saat ini pasti lagi sedih banget.
+Terkadang jalan yang kita rencanakan memang ga selalu jadi
+jalan terbaik menurut tuhan.
+Kamu gagal dua kali bukan berarti semua nya berakhir.
+jika diterima berarti baik, jika tidak diterima berarti ada yg lebih baik.
+
+Mungkin jalannya memang berbeda, 
+tapi bukan berarti kamu kalah.
+Aku tau ini berat banget buat kamu.
+Tapi tolong jangan merasa kamu ga hebat.
+Aku udah bilang kan, kamu tuh hebattt banget di mata aku.
+
+Nangis gapapa kok, kecewa juga wajar, 
+tapi aku mohon jangan berhenti percaya sama diri sendiri ya.
+Kalau cape istirahat, terus bangkit lagi pelan pelan, 
+aku percaya kamu masih punya kesempatan dan masa depan yg bagus di masa depan.
+
+And whatever happens, i'll always love and be proud of you sayanggg.
+Jangan lama lama sedihnya ya, aku di sini juga sedih.
+`
+
+];
+
+let currentLetter = 0;
+let index = 0;
+
+/* OPEN LETTER */
+function openLetter(){
+
+    currentLetter = 0;
+
+    showLetter();
+}
+
+/* SHOW LETTER */
+function showLetter(){
+
+    nextPage('letter');
+
+    document.getElementById("typingText").innerHTML = "";
+
+    index = 0;
+
+    /* tombol next hanya muncul jika bukan surat terakhir */
+    if(currentLetter < letters.length - 1){
+
+        document.getElementById("nextBtn").style.display = "inline-block";
+
+    }else{
+
+        document.getElementById("nextBtn").style.display = "none";
+    }
+
+    typeWriter();
+}
+
+/* TYPE EFFECT */
+function typeWriter(){
+
+    const text = letters[currentLetter];
+
+    if(index < text.length){
+
+        document.getElementById("typingText").innerHTML += text.charAt(index);
+
+        index++;
+
+        setTimeout(typeWriter, 40);
+    }
+}
+
+/* NEXT LETTER */
+function nextLetter(){
+
+    currentLetter++;
+
+    showLetter();
+}
+
+/* REPLAY LETTER */
+function replayLetter(){
+
+    document.getElementById("typingText").innerHTML = "";
+
+    index = 0;
+
+    typeWriter();
+}
+</script>
+
+</body>
+</html>
